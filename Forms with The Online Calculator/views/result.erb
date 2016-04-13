@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Result | Online Calculator</title>
+	</head>
+	<body>
+		<h1>Result</h1>
+		<p><%= "#{@first} #{@operation} #{@second} = #{@result}" %></p>
+		<form action="/save" method="POST">
+			<input type="number" name="result" hidden="true" value="<%= @result %>">
+			<button type="submit">Save</button>
+		</form>
+	</body>
+</html>

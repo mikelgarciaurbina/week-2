@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Online Calculator</title>
+	</head>
+	<body>
+		<h1>Calculator</h1>
+		<form action="/result" method="POST">
+			<% if @preview_result != 0.to_f %>
+				<input type="number" name="first_number" placeholder="1st number" value="<%= @preview_result %>">
+			<% else %>
+				<input type="number" name="first_number" placeholder="1st number">
+			<% end %>
+			<input type="number" name="second_number" placeholder="2nd number">
+			<br>
+			<button type="submit" name="operation" value="+">+</button>
+			<button type="submit" name="operation" value="-">-</button>
+			<button type="submit" name="operation" value="*">*</button>
+			<button type="submit" name="operation" value="/">/</button>
+		</form>
+	</body>
+</html>
