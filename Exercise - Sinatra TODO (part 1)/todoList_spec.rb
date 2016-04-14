@@ -1,6 +1,8 @@
 require_relative "todoList.rb"
 require_relative "task.rb"
 
+require 'yaml/store'
+
 RSpec.describe TodoList do 
   before :each do
     @todo_list = TodoList.new("Mikel")

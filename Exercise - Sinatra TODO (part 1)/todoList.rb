@@ -11,11 +11,11 @@ class TodoList
   end
 
   def delete_task(task_id)
-  	@tasks.delete_if {|task| task.id == task_id}
+  	@tasks.delete_if {|task| task.id == task_id.to_i}
   end
 
   def find_task_by_id(task_id)
-  	id = @tasks.index { |task| task.id == task_id }
+  	id = @tasks.index { |task| task.id == task_id.to_i }
   	id ? @tasks[id] : nil
   end
 
