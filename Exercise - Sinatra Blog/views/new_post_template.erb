@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sinatra blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="/">Sinatra Blog</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a class="button special" href="/new_post_template">New post</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>New post</h2>
+						</header>
+
+						<!-- Form -->
+							<section>
+								<h3>Form</h3>
+								<p><%= @error %></p>
+								<form method="post" action="/create_post">
+									<div class="row uniform 50%">
+										<div class="6u 12u$(xsmall)">
+											<input type="text" name="title" id="title" value="<%= @title %>" placeholder="Title" />
+										</div>
+										<div class="6u$ 12u$(xsmall)">
+											<input type="text" name="author" id="author" value="<%= @author %>" placeholder="Author" />
+										</div>
+										<div class="12u$">
+											<div class="select-wrapper">
+												<select name="category" id="category">
+													<option value="">- Category -</option>
+													<option value="1">Notice</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+										</div>
+										<div class="12u$">
+											<textarea name="text" id="text" placeholder="Enter your post body" rows="6"><%= @text %></textarea>
+										</div>
+										<div class="12u$">
+											<ul class="actions">
+												<li><input type="submit" value="Create post" class="special" /></li>
+												<li><input type="reset" value="Reset" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://twitter.com/Gartzia6" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/mikel.garciaurbina" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.linkedin.com/in/mikelgarciaurbina" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/mikelgarciaurbina" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="mailto:mikel_6@hotmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: Mikel Garcia</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>

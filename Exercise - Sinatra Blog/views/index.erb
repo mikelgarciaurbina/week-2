@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>     
+    <title>Ironblog</title>
+  </head>
+  <body>
+    <h1>Blog</h1>
+    <a href="/new_post">Create new post</a>
+    <% @posts.each_with_index do |post, index| %>
+	    <p><a href="/post_details/<%= index %>"><%= post.title %></a></p>
+    <% end %>
+  </body>
+</html>

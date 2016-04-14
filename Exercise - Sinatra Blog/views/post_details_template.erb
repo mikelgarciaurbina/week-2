@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sinatra blog</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	</head>
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1 id="logo"><a href="/">Sinatra Blog</a></h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a class="button special" href="/new_post_template">New post</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2><%= @post.title %></h2>
+							<p><%= @post.date %> | <%= @post.category %> | <%= @post.author %></p>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+								<a href="#" class="image fit"><img src="../images/pic0<%= rand(3) %>.jpg" alt="" /></a>
+								<p><%= @post.text %></p>
+							</section>
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://twitter.com/Gartzia6" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/mikel.garciaurbina" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.linkedin.com/in/mikelgarciaurbina" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/mikelgarciaurbina" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="mailto:mikel_6@hotmail.com" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: Mikel Garcia</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrollex.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
