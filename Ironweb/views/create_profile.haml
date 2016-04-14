@@ -1,0 +1,24 @@
+<!doctype html>
+%html
+  %head     
+    %title Ironweb
+  %body
+    %form{:action => "/save_profile", :method => "POST"}
+      %input{:name => "name", :type => "text", :placeholder => "Input your name :)", :value => "#{@name}"}
+      %br/
+      %input{:name => "birthdate", :type => "number", :placeholder => "Input your birthdate year :)", :value => "#{@birthdate}"}
+      %br/
+      %input{:name => "email", :type => "email", :placeholder => "Input your email :)", :value => "#{@email}"}
+      %br/
+      %input{:name => "address", :type => "text", :placeholder => "Input your address :)", :value => "#{@address}"}
+      %br/
+      %p you have experience?
+      %input{:name => "advanced", :type => "radio", :value => "yes"}/
+      Yes
+      %br/
+      %input{:name => "advanced", :type => "radio", :value => "no"}/
+      No
+      %br/
+      %br/
+      %button{:type => "submit"} Save profile
+    %p #{@error}

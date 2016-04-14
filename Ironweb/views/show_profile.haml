@@ -1,0 +1,26 @@
+<!doctype html>
+%html
+  %head     
+    %title |Profile| Ironweb
+  %body
+    %h1 Profile
+    %p Name: #{@name}
+    %p Age: #{@age}
+    %p Email: #{@email}
+    - if @address != ""
+      %p address: #{@address}
+    - if @advanced
+      %p Advanced
+    - else
+      %p Loser
+    %p Courses
+    %ul
+    - @courses.each do |course|
+      %li
+        = course[:name]
+        - sing_course = false
+        - @courses_session.each do |course_ses|
+          - if course_ses[:id] == course[:id]
+            - sing_course = true
+        - if !sing_course
+          %a{:href => "/sing_up_course/#{course[:id]}"} Sing up
