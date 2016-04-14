@@ -1,0 +1,14 @@
+%h1 Login
+%form{:action => "/puertas/results", :method => "POST"}
+  %input{:name => "name", :placeholder => "Insert name", :type => "text", :value => "#{@name}"}/
+  %input{:name => "year", :placeholder => "Insert year", :type => "number", :value => "#{@year}"}/
+  %br/
+  %button{:type => "submit"} Save
+%p #{@error}
+- if @error != ""
+  - if @name == "" 
+    :javascript
+      document.getElementsByName("name")[0].style.boxShadow = "0px 0px 20px red";
+  - if @year == "" 
+    :javascript
+      document.getElementsByName("year")[0].style.boxShadow = "0px 0px 20px red";

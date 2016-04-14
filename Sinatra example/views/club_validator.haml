@@ -1,6 +1,6 @@
-- if Time.now.year - @year.to_i >= 18
-  %p #{@name} you can access
-  %iframe.giphy-embed{:allowfullscreen => "", :frameborder => "0", :height => "269", :src => "//giphy.com/embed/irRvb9I4XCJQQ", :width => "480"}
+- if Time.now.year - 18 >= @year.to_i
+  %p #{@name} you have access
+  %img{:src => "http://www.besalinas.com/wp-content/uploads/2016/02/Te-dejo-pasar...-300x197.jpg"}
 - else
-  %p #{@name} you can´t access
-  %iframe.giphy-embed{:allowfullscreen => "", :frameborder => "0", :height => "270", :src => "//giphy.com/embed/xTiTnIPc8OqruiUxBC", :width => "480"}
+  %p #{@name} you cannot access
+  %img{:src => "https://cdn.meme.am/instances/500x/45799974.jpg"}
