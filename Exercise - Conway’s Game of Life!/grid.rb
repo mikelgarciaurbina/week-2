@@ -44,4 +44,28 @@ class Grid
     end
     neighbours_array_line
   end
+
+  def show_array_grid
+    @columns.times do |column|
+      puts " - - - - - - - - - - - - - - -"
+      @lines.times do |line|
+        print " | "
+        print @array_grid[column][line]
+      end
+      puts " |"
+    end
+    puts " - - - - - - - - - - - - - - -"
+  end
+
+  def array_grid_end?
+    grid_end = true
+    @columns.times do |column|
+      @lines.times do |line|
+        if @array_grid[column][line] == 1
+          grid_end = false
+        end
+      end
+    end
+    grid_end
+  end
 end
